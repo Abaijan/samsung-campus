@@ -35,9 +35,7 @@ public final class ToDo {
         // This class cannot be instantiated
         private ToDoMetadata() {}
 
-        /**
-         * The content:// style URL for this table
-         */
+
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/misc");
 
         /**
