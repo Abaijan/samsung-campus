@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on December 29, 2025 by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>To Do list for Android: 6.1 Exporting To Do data</title>
+
+<meta name="description" content="To Do list for Android: 6.1 Exporting To Do data">
+<meta name="keywords" content="To Do list for Android: 6.1 Exporting To Do data">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="Exporting-To-Do-data"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="ToDo_20.html#Exporting-and-Importing" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_20.html#Exporting-and-Importing" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_20.html#Exporting-and-Importing" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_22.html#Importing-To-Do-data" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_23.html#Known-Bugs" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="ToDo.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="ToDo_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<hr>
+<a name="Exporting-To-Do-data-1"></a>
+<h2 class="section">6.1 Exporting To Do data</h2>
+
+<p>In order to protect against the loss of data on your Android device,
+you should periodically make a backup copy.  First, if you have set a
+password for your private records make sure you have entered the
+password in the &ldquo;Settings&rdquo; to unlock them.  Then in the main menu
+select &ldquo;Export Data&rdquo; to save all of your To Do items to a file on
+your device.
+</p>
+<img src="Export-private.png" alt="Export-private">
+
+<p>You can choose where to save the file and what to name it, but by
+default it is saved to the app&rsquo;s private storage area on your device.
+The export dialog shows the location of this storage, which can vary
+depending on your version of Android &mdash; for example:
+&lsquo;<tt>/sdcard/Android/Data/com.abaijan.todo/files/</tt>&rsquo;.
+</p>
+
+
+<p>If you select &ldquo;Saved to shared storage&rdquo;, you have the option to save
+it anywhere supported by Android&rsquo;s Storage Access Framework if running
+Android 7 (Nougat) or newer.  You will need to enter the name of the
+export file you wish to save, ending in &lsquo;<tt>.xml</tt>&rsquo;.
+</p>
+<img src="SAF-Create_Document.png" alt="SAF-Create_Document">
+
+<p>After pressing &ldquo;Save&rdquo; you will return to the app&rsquo;s Export screen.
+</p>
+
+
+<p>If you are using Android 6 (Marshmallow) or older, selecting &ldquo;Save to
+shared storage&rdquo; will change the folder to the device&rsquo;s default
+&lsquo;<tt>Downloads</tt>&rsquo; directory.  You can change the location by typing it
+in, but be sure the location is accessible.
+</p>
+<img src="Export-shared.png" alt="Export-shared">
+
+<p>If you wish to include private records in the exported file, be sure
+the &ldquo;Include Private&rdquo; box is checked.  You can also export just the
+non-private items by leaving this box unchecked.  When ready, press
+&ldquo;Export&rdquo;.  The app will show a progress bar as it writes the data
+out (if it takes long enough) then return to the To Do list.
+</p>
+
+
+<hr>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="ToDo_20.html#Exporting-and-Importing" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_20.html#Exporting-and-Importing" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_20.html#Exporting-and-Importing" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_22.html#Importing-To-Do-data" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_23.html#Known-Bugs" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="ToDo.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="ToDo_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="ToDo_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>December 29, 2025</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modern preferences screen with card-based design -->
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/Preferences"
+	android:background="@color/background"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:scrollbars="vertical"
+	android:scrollbarAlwaysDrawVerticalTrack="false"
+	android:padding="16dp">
+
+	<LinearLayout
+		android:id="@+id/LinearLayout01"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<!-- Sorting Card -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/card_background"
+			android:padding="16dp"
+			android:orientation="vertical"
+			android:layout_marginBottom="12dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Display Options"
+				android:textSize="14sp"
+				android:textColor="@color/text_primary"
+				android:textStyle="bold"
+				android:layout_marginBottom="12dp"/>
+
+			<LinearLayout
+				android:id="@+id/LinearLayout02"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center_vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:id="@+id/PrefsTextSortBy"
+					android:text="@string/PrefTextSortBy"
+					android:layout_height="wrap_content"
+					android:textSize="14sp"
+					android:textColor="@color/text_secondary"
+					android:layout_marginRight="12dp"/>
+
+				<Spinner
+					android:layout_height="wrap_content"
+					android:id="@+id/PrefsSpinnerSortBy"
+					android:entries="@array/PrefSortByList"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					android:background="@drawable/edittext_background"/>
+			</LinearLayout>
+
+			<CheckBox
+				android:text="@string/PrefTextShowChecked"
+				android:id="@+id/PrefsCheckBoxShowChecked"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:button="@drawable/checkbox_modern"
+				android:textSize="14sp"
+				android:textColor="@color/text_primary"
+				android:layout_marginTop="8dp"
+				android:paddingTop="8dp"
+				android:paddingBottom="8dp"/>
+		</LinearLayout>
+
+		<!-- Visibility Card -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/card_background"
+			android:padding="16dp"
+			android:orientation="vertical"
+			android:layout_marginBottom="12dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Show/Hide Fields"
+				android:textSize="14sp"
+				android:textColor="@color/text_primary"
+				android:textStyle="bold"
+				android:layout_marginBottom="8dp"/>
+
+			<CheckBox
+				android:text="@string/PrefTextShowDueDate"
+				android:id="@+id/PrefsCheckBoxShowDueDate"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:button="@drawable/checkbox_modern"
+				android:textSize="14sp"
+				android:textColor="@color/text_primary"
+				android:paddingTop="8dp"
+				android:paddingBottom="8dp"/>
+
+			<CheckBox
+				android:text="@string/PrefTextShowPriority"
+				android:id="@+id/PrefsCheckBoxShowPriority"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:button="@drawable/checkbox_modern"
+				android:textSize="14sp"
+				android:textColor="@color/text_primary"
+				android:paddingTop="8dp"
+				android:paddingBottom="8dp"/>
+
+			<CheckBox
+				android:text="@string/PrefTextShowCategory"
+				android:id="@+id/PrefsCheckBoxShowCategory"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:button="@drawable/checkbox_modern"
+				android:textSize="14sp"
+				android:textColor="@color/text_primary"
+				android:paddingTop="8dp"
+				android:paddingBottom="8dp"/>
+
+			<CheckBox
+				android:id="@+id/PrefsCheckBoxShowPrivate"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/PrefTextShowPrivate"
+				android:button="@drawable/checkbox_modern"
+				android:textSize="14sp"
+				android:textColor="@color/text_primary"
+				android:paddingTop="8dp"
+				android:paddingBottom="8dp"/>
+		</LinearLayout>
+
+		<!-- Alarm Settings Card -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/card_background"
+			android:padding="16dp"
+			android:orientation="vertical"
+			android:layout_marginBottom="12dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Alarm Settings"
+				android:textSize="14sp"
+				android:textColor="@color/text_primary"
+				android:textStyle="bold"
+				android:layout_marginBottom="12dp"/>
+
+			<CheckBox
+				android:text="@string/PrefTextAlarmVibrate"
+				android:id="@+id/PrefsCheckBoxAlarmVibrate"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:button="@drawable/checkbox_modern"
+				android:textSize="14sp"
+				android:textColor="@color/text_primary"
+				android:paddingTop="8dp"
+				android:paddingBottom="8dp"/>
+
+			<LinearLayout
+				android:id="@+id/LinearLayout04"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center_vertical"
+				android:layout_marginTop="8dp">
+
+				<TextView
+					android:id="@+id/PrefsTextAlarmSound"
+					android:text="@string/PrefTextSound"
+					android:gravity="center_vertical"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:textSize="14sp"
+					android:textColor="@color/text_secondary"
+					android:layout_marginRight="12dp"/>
+
+				<Spinner
+					android:id="@+id/PrefsSpinnerAlarmSound"
+					android:layout_height="wrap_content"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					android:background="@drawable/edittext_background"/>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

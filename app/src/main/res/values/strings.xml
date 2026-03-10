@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="InfoPopupText">To Do\nверсия 1.4.3 (2025.12.29)\nавтор: Абайжан Алимбеков\n\n</string>
+    <string name="about">О программе…</string>
+    <string name="app_name">To Do</string>
+    <string name="default_web_client_id">293189029433-2a42buudtq3m5vue9fo84th81ih8o25t.apps.googleusercontent.com</string>
+    <string name="service_name_alarm">Служба напоминаний</string>
+    <string name="service_name_export">Служба экспорта</string>
+    <string name="service_name_import_palm">Служба импорта (Palm)</string>
+    <string name="service_name_import_xml">Служба импорта (XML)</string>
+    <string name="service_name_password_change">Служба смены пароля</string>
+
+    <string name="AlarmButtonCancel">Отмена</string>
+    <string name="AlarmButtonOK">ОК</string>
+    <string name="AlarmServiceBackgroundMessage">Проверка списка задач на наличие напоминаний…</string>
+    <string name="AlarmTextAlarm">Напоминание</string>
+    <string name="AlarmTextDaysEarlier">дней раньше</string>
+    <string name="AlarmTextTime">Время напоминания:</string>
+    <string name="AlarmTextNextAlarm">Следующее напоминание:</string>
+    <string name="AlarmTitle">Напоминание</string>
+
+    <string name="Category_All">Все</string>
+    <string name="Category_Edit">Редактировать категории…</string>
+    <string name="Category_Unfiled">Без категории</string>
+
+    <string-array name="CategoryFilterList">
+        <item>@string/Category_All</item>
+        <item>@string/Category_Unfiled</item>
+    </string-array>
+
+    <string name="CategoryListButtonCancelText">Отмена</string>
+    <string name="CategoryListButtonNewText">Создать</string>
+    <string name="CategoryListButtonOKText">ОК</string>
+
+    <string name="ConfirmationTextDeleteNote">Удалить эту заметку?</string>
+    <string name="ConfirmationTextDeleteToDo">Удалить эту задачу?</string>
+    <string name="ConfirmationButtonCancel">Отмена</string>
+    <string name="ConfirmationButtonOK">ОК</string>
+
+    <string name="DatePickerCancel">Отмена</string>
+    <string name="DatePickerFri">Пт</string>
+    <string name="DatePickerMon">Пн</string>
+    <string name="DatePickerSat">Сб</string>
+    <string name="DatePickerSun">Вс</string>
+    <string name="DatePickerTitleDueDate">Срок выполнения</string>
+    <string name="DatePickerTitleEndingOn">Заканчивается</string>
+    <string name="DatePickerThu">Чт</string>
+    <string name="DatePickerToday">Сегодня</string>
+    <string name="DatePickerTue">Вт</string>
+    <string name="DatePickerWed">Ср</string>
+
+    <string name="DetailButtonCancel">Отмена</string>
+    <string name="DetailButtonDelete">Удалить…</string>
+    <string name="DetailButtonOK">ОК</string>
+    <string name="DetailDescriptionPlaceholder">Описание</string>
+    <string name="DetailNotset">Нет</string>
+    <string name="DetailTextAlarm">Напоминание:</string>
+    <string name="DetailTextCategory">Категория:</string>
+    <string name="DetailTextCompleted">Завершено:</string>
+
+    <plurals name="DetailTextDaysEarlier">
+        <item quantity="one">%d день раньше</item>
+        <item quantity="other">%d дней раньше</item>
+    </plurals>
+
+    <string name="DetailTextDueDate">Срок:</string>
+    <string name="DetailTextHideUntil">Скрывать до:</string>
+    <string name="DetailTextPriority">Приоритет:</string>
+    <string name="DetailTextPrivate">Личное:</string>
+    <string name="DetailTextRepeat">Повтор:</string>
+
+    <string name="DialogConfirmPassword">Повторите:</string>
+    <string name="DialogEnterPassword">Пароль:</string>
+    <string name="DialogExportTo">Данные будут сохранены в:\n%s</string>
+    <string name="DialogNewPassword">Новый пароль:</string>
+    <string name="DialogOldPassword">Старый пароль:</string>
+    <string name="DialogShowPassword">Показать пароль</string>
+
+    <string-array name="DueDateFormatList">
+        <item>@string/DueDateFormatToday</item>
+        <item>@string/DueDateFormatTomorrow</item>
+        <item>@string/DueDateFormatDayOfWeek</item>
+        <item>@string/DueDateFormatDayOfWeek</item>
+        <item>@string/DueDateFormatDayOfWeek</item>
+        <item>@string/DueDateFormatDayOfWeek</item>
+        <item>@string/DueDateFormatDayOfWeek</item>
+        <item>@string/DueDateFormatNextWeek</item>
+    </string-array>
+
+    <string name="DueDateFormatDayOfWeek">d.MM – EEEE</string>
+    <string name="DueDateFormatNextWeek">d.MM – «Через неделю»</string>
+    <string name="DueDateFormatToday">d.MM – «Сегодня»</string>
+    <string name="DueDateFormatTomorrow">d.MM – «Завтра»</string>
+    <string name="DueDateNoDate">Без даты</string>
+    <string name="DueDateOther">Выбрать дату…</string>
+
+    <string name="ErrorDescriptionBlank">Описание задачи пустое.</string>
+    <string name="ErrorCannotFind">Не удалось найти %s</string>
+    <string name="ErrorCategoryID">Неверная категория.</string>
+    <string name="ErrorExportCantMkdirs">Не удалось создать папку %s</string>
+    <string name="ErrorExportFailed">Ошибка экспорта</string>
+    <string name="ErrorExportPermissionDenied">Нет права записи в %s. Разрешите доступ или выберите другую папку.</string>
+    <string name="ErrorFailedToAddRecords">Не удалось добавить записи</string>
+    <string name="ErrorFileNotFound">Файл не найден</string>
+    <string name="ErrorImportCantRead">Не удалось прочитать файл %s</string>
+    <string name="ErrorImportFailed">Ошибка импорта</string>
+    <string name="ErrorImportNotFound">Файл импорта %s не найден</string>
+    <string name="ErrorImportPermissionDenied">Нет права чтения %s. Разрешите доступ или переместите файл.</string>
+    <string name="ErrorNoRecordsImported">Не импортировано ни одной записи</string>
+    <string name="ErrorNotImplemented">Ещё не реализовано</string>
+    <string name="ErrorPasswordMismatch">Новые пароли не совпадают.</string>
+    <string name="ErrorPriority">Неверный приоритет.</string>
+    <string name="ErrorSDNotFound">Носитель данных не найден</string>
+
+    <string name="ExportButtonCancel">Отмена</string>
+    <string name="ExportButtonOK">Экспорт</string>
+    <string name="ExportEditDirectoryHint">Папка для сохранения файла</string>
+    <string name="ExportEditFileHint">Имя файла экспорта</string>
+    <string name="ExportFileDialogTitle">Экспорт файла To Do</string>
+    <string name="ExportRadioButtonPrivateFolder">Сохранить во внутреннее хранилище приложения</string>
+    <string name="ExportRadioButtonPublicFolder">Сохранить в общедоступное хранилище</string>
+    <string name="ExportTextDirectory">Папка:</string>
+    <string name="ExportTextFile">Имя файла:</string>
+    <string name="ExportTextIncludePrivate">Включить личные:</string>
+    <string name="ExportTextPasswordNotSetWarning">Пароль не задан в настройках. Зашифрованные записи не будут экспортированы!</string>
+
+    <string name="HideButtonCancel">Отмена</string>
+    <string name="HideButtonOK">ОК</string>
+    <string name="HideTextHide">Скрывать до</string>
+    <string name="HideTextDaysEarlier">дней раньше</string>
+    <string name="HideTextShow">Показывать после:</string>
+    <string name="HideTitle">Скрывать, если срок ещё не наступил</string>
+
+    <string name="ImportButtonCancel">Отмена</string>
+    <string name="ImportButtonOK">Импорт</string>
+    <string name="ImportEditDirectoryHint">Папка с файлом импорта</string>
+    <string name="ImportEditFileHint">Имя файла импорта</string>
+    <string name="ImportEditPasswordHint">Пароль</string>
+    <string name="ImportFileDialogTitle">Импорт файла To Do</string>
+    <string name="ImportRadioButtonPrivateFolder">Файл из внутреннего хранилища приложения</string>
+    <string name="ImportRadioButtonPublicFolder">Файл из общедоступного хранилища</string>
+    <string name="ImportTextDirectory">Папка:</string>
+    <string name="ImportTextFile">Имя файла:</string>
+    <string name="ImportTextImportType">Тип импорта:</string>
+    <string name="ImportTextIncludePrivate">Включить личные:</string>
+    <string name="ImportTextPassword">Сохранённый пароль:</string>
+    <string name="ImportTextPasswordNotSetWarning">Пароль не задан в настройках. Личные записи не будут зашифрованы!</string>
+    <string name="ImportTextShowPassword">Показать пароль</string>
+
+    <string-array name="ImportTypeList">
+        <item>Очистить и заменить</item>
+        <item>Перезаписать</item>
+        <item>Обновить существующие</item>
+        <item>Слияние</item>
+        <item>Добавить новые</item>
+        <item>Тест (без изменений)</item>
+    </string-array>
+
+    <string name="InfoButtonOK">ОК</string>
+    <string name="ListButtonNew">Создать</string>
+    <string name="ListDueDateFormat">d.MM</string>
+
+    <string name="MenuExport">Экспорт данных</string>
+    <string name="MenuImport">Импорт данных</string>
+    <string name="MenuInfo">О программе…</string>
+    <string name="MenuLock">Заблокировать зашифрованные записи</string>
+    <string name="MenuPasswordChange">Сменить пароль</string>
+    <string name="MenuPasswordSet">Установить пароль</string>
+    <string name="MenuSettings">Настройки</string>
+    <string name="MenuUnlock">Разблокировать зашифрованные записи</string>
+    <string name="MenuShowCompleted">Показать/скрыть завершённые</string>
+
+    <string-array name="MonList">
+        <item>@string/MonthJan</item>
+        <item>@string/MonthFeb</item>
+        <item>@string/MonthMar</item>
+        <item>@string/MonthApr</item>
+        <item>@string/MonthMay</item>
+        <item>@string/MonthJun</item>
+        <item>@string/MonthJul</item>
+        <item>@string/MonthAug</item>
+        <item>@string/MonthSep</item>
+        <item>@string/MonthOct</item>
+        <item>@string/MonthNov</item>
+        <item>@string/MonthDec</item>
+    </string-array>
+
+    <string-array name="MonthList">
+        <item>@string/MonthJanuary</item>
+        <item>@string/MonthFebruary</item>
+        <item>@string/MonthMarch</item>
+        <item>@string/MonthApril</item>
+        <item>@string/MonthMay</item>
+        <item>@string/MonthJune</item>
+        <item>@string/MonthJuly</item>
+        <item>@string/MonthAugust</item>
+        <item>@string/MonthSeptember</item>
+        <item>@string/MonthOctober</item>
+        <item>@string/MonthNovember</item>
+        <item>@string/MonthDecember</item>
+    </string-array>
+
+    <string name="MonthApr">апр</string>
+    <string name="MonthApril">Апрель</string>
+    <string name="MonthAug">авг</string>
+    <string name="MonthAugust">Август</string>
+    <string name="MonthDec">дек</string>
+    <string name="MonthDecember">Декабрь</string>
+    <string name="MonthFeb">фев</string>
+    <string name="MonthFebruary">Февраль</string>
+    <string name="MonthJan">янв</string>
+    <string name="MonthJanuary">Январь</string>
+    <string name="MonthJul">июл</string>
+    <string name="MonthJuly">Июль</string>
+    <string name="MonthJun">июн</string>
+    <string name="MonthJune">Июнь</string>
+    <string name="MonthMar">мар</string>
+    <string name="MonthMarch">Март</string>
+    <string name="MonthMay">май</string>
+    <string name="MonthNov">ноя</string>
+    <string name="MonthNovember">Ноябрь</string>
+    <string name="MonthOct">окт</string>
+    <string name="MonthOctober">Октябрь</string>
+    <string name="MonthSep">сен</string>
+    <string name="MonthSeptember">Сентябрь</string>
+
+    <string name="NoteButtonDelete">Удалить…</string>
+    <string name="NoteButtonOK">Готово</string>
+
+    <string name="NotificationChannelDueName">Задачи на сегодня</string>
+    <string name="NotificationChannelDueDescription">Уведомления о задачах, которые нужно выполнить сегодня или для которых установлено раннее напоминание</string>
+    <string name="NotificationChannelOverdueName">Просроченные задачи</string>
+    <string name="NotificationChannelOverdueDescription">Уведомления о просроченных задачах</string>
+    <string name="NotificationChannelSilentName">Обновление напоминаний</string>
+    <string name="NotificationChannelSilentDescription">Временное уведомление при установке или срабатывании напоминания</string>
+
+    <string name="NotificationFormatPrivate">[Личное]</string>
+    <string name="NotificationFormatEncrypted">[Заблокировано]</string>
+
+    <string-array name="OrdinalList">
+        <item>@string/Ordinal1</item>
+        <item>@string/Ordinal2</item>
+        <item>@string/Ordinal3</item>
+        <item>@string/Ordinal4</item>
+        <item>@string/Ordinal5</item>
+        <item>@string/Ordinal6</item>
+        <item>@string/Ordinal7</item>
+        <item>@string/Ordinal8</item>
+        <item>@string/Ordinal9</item>
+        <item>@string/Ordinal10</item>
+        <item>@string/Ordinal11</item>
+        <item>@string/Ordinal12</item>
+        <item>@string/Ordinal13</item>
+    </string-array>
+
+    <string name="Ordinal1">%d-й</string>
+    <string name="Ordinal2">%d-й</string>
+    <string name="Ordinal3">%d-й</string>
+    <string name="Ordinal4">%d-й</string>
+    <string name="Ordinal5">%d-й</string>
+    <string name="Ordinal6">%d-й</string>
+    <string name="Ordinal7">%d-й</string>
+    <string name="Ordinal8">%d-й</string>
+    <string name="Ordinal9">%d-й</string>
+    <string name="Ordinal10">%d-й</string>
+    <string name="Ordinal11">%d-й</string>
+    <string name="Ordinal12">%d-й</string>
+    <string name="Ordinal13">%d-й</string>
+
+    <string name="OrdinalLast">последний</string>
+    <string name="OrdinalOnly"></string>
+    <string name="OrdinalOther">другой</string>
+
+    <string-array name="OtherOrdinalList">
+        <item>@string/OrdinalOnly</item>
+        <item>@string/OrdinalOther</item>
+    </string-array>
+
+    <string name="PasswordProtected">[Заблокировано]</string>
+
+    <string name="PermissionRequiredTitle">Требуется разрешение</string>
+    <string name="PermissionToPostNotificationRationale">Приложению нужно ваше разрешение, чтобы показывать уведомления о напоминаниях. Включите уведомления для этого приложения в настройках Android.</string>
+
+    <string name="PrefTextSortBy">Сортировка:</string>
+
+    <string-array name="PrefSortByList">
+        <item>@string/PrefSortByPriorityDueDate</item>
+        <item>@string/PrefSortByDueDatePriority</item>
+        <item>@string/PrefSortByCategoryPriority</item>
+        <item>@string/PrefSortByCategoryDueDate</item>
+        <item>@string/PrefSortByAlpha</item>
+        <item>@string/PrefSortByDueDateAlpha</item>
+    </string-array>
+
+    <string name="PrefSortByPriorityDueDate">Приоритет, затем срок</string>
+    <string name="PrefSortByDueDatePriority">Срок, затем приоритет</string>
+    <string name="PrefSortByCategoryPriority">Категория, затем приоритет</string>
+    <string name="PrefSortByCategoryDueDate">Категория, затем срок</string>
+    <string name="PrefSortByAlpha">По алфавиту</string>
+    <string name="PrefSortByDueDateAlpha">Срок, затем по алфавиту</string>
+
+    <string name="PrefTextAlarmSound">Звук напоминания:</string>
+    <string name="PrefTextAlarmVibrate">Вибрация при напоминании</string>
+    <string name="PrefTextNoSound">Без звука</string>
+    <string name="PrefTextPassword">Пароль:</string>
+    <string name="PrefTextShowChecked">Показывать завершённые и скрытые задачи</string>
+    <string name="PrefTextShowCompleted">Показывать дату завершения</string>
+    <string name="PrefTextShowDueDate">Показывать сроки выполнения</string>
+    <string name="PrefTextShowPassword">Показать</string>
+    <string name="PrefTextShowPriority">Показывать приоритеты</string>
+    <string name="PrefTextShowPrivate">Показывать личные записи</string>
+    <string name="PrefTextShowCategory">Показывать категории</string>
+    <string name="PrefTextSound">Звук:</string>
+
+    <string name="ProgressMessageDecrypting">Расшифровка записей старым паролем…</string>
+    <string name="ProgressMessageEncrypting">Шифрование записей новым паролем…</string>
+    <string name="ProgressMessageExportCategories">Экспорт категорий…</string>
+    <string name="ProgressMessageExportItems">Экспорт задач…</string>
+    <string name="ProgressMessageExportSettings">Экспорт настроек приложения…</string>
+    <string name="ProgressMessageImportCategories">Импорт категорий…</string>
+    <string name="ProgressMessageImportFinished">Импорт завершён</string>
+    <string name="ProgressMessageImportItems">Импорт задач…</string>
+    <string name="ProgressMessageImportParsing">Разбор файла…</string>
+    <string name="ProgressMessageImportReading">Чтение файла…</string>
+    <string name="ProgressMessageImportSettings">Импорт настроек приложения…</string>
+
+    <plurals name="PromptAddRecords">
+        <item quantity="one">Добавить %d запись?</item>
+        <item quantity="other">Добавить %d записей?</item>
+    </plurals>
+
+    <string name="PromptImportSuccess">Импорт успешно завершён</string>
+    <string name="PromptSaveEitherFileTo">Сохраните файл todo.dat или todo.xml в:\n%s</string>
+    <string name="PromptMountStorage">Пожалуйста, отключите USB-кабель или режим USB-накопителя.</string>
+
+    <string-array name="RepeatList">
+        <item>@string/RepeatNone</item>
+        <item>@string/RepeatDailyUntilDots</item>
+        <item>@string/RepeatEveryWeek</item>
+        <item>@string/RepeatSemiMonthly</item>
+        <item>@string/RepeatEveryMonth</item>
+        <item>@string/RepeatEveryYear</item>
+        <item>@string/RepeatOther</item>
+    </string-array>
+
+    <string name="RepeatButtonCancel">Отмена</string>
+    <string name="RepeatButtonNoEndDate">Без конечной даты</string>
+    <string name="RepeatButtonOK">ОК</string>
+
+    <string name="RepeatDaily">Ежедневно</string>
+    <string name="RepeatDailyDots">Ежедневно…</string>
+    <string name="RepeatDailyUntilDots">Ежедневно до…</string>
+    <string name="RepeatDailyUntilWhen">Ежедневно до %s</string>
+
+    <plurals name="RepeatDescriptionDaily">
+        <item quantity="one">Каждый день</item>
+        <item quantity="other">Каждые %s дня</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionDayAfter">
+        <item quantity="one">%d день после завершения предыдущей задачи</item>
+        <item quantity="other">%d дней после завершения предыдущей задачи</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionMonthAfter">
+        <item quantity="one">%d месяц после завершения предыдущей задачи</item>
+        <item quantity="other">%d месяцев после завершения предыдущей задачи</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionMonthlyOnDate">
+        <item quantity="one">%1$s каждого месяца</item>
+        <item quantity="other">%1$s каждые %2$s месяца</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionMonthlyOnDay">
+        <item quantity="one">%1$s %2$s каждого месяца</item>
+        <item quantity="other">%1$s %2$s каждые %3$s месяца</item>
+    </plurals>
+
+    <string name="RepeatDescriptionNone">Без повтора</string>
+    <string name="RepeatDescriptionOnDay"> в %s</string>
+    <string name="RepeatDescriptionOn2Days"> в %1$s и %2$s</string>
+    <string name="RepeatDescriptionOn2DaysAllowed"> в %1$s или %2$s</string>
+
+    <plurals name="RepeatDescriptionSemiMonthlyOnDates">
+        <item quantity="one">%1$s и %2$s каждого месяца</item>
+        <item quantity="other">%1$s и %2$s каждые %3$s месяца</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionSemiMonthlyOnDays">
+        <item quantity="one">%1$s %2$s и %3$s %4$s каждого месяца</item>
+        <item quantity="other">%1$s %2$s и %3$s %4$s каждые %5$s месяца</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionWeekAfter">
+        <item quantity="one">%d неделя после завершения предыдущей задачи</item>
+        <item quantity="other">%d недель после завершения предыдущей задачи</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionWeekly">
+        <item quantity="one">Каждую неделю</item>
+        <item quantity="other">Каждые %s недели</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionYearAfter">
+        <item quantity="one">%d год после завершения предыдущей задачи</item>
+        <item quantity="other">%d лет после завершения предыдущей задачи</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionYearlyOnDate">
+        <item quantity="one">%1$s %2$s каждый год</item>
+        <item quantity="other">%1$s %2$s каждые %3$s года</item>
+    </plurals>
+
+    <plurals name="RepeatDescriptionYearlyOnDay">
+        <item quantity="one">%1$s %2$s %3$s каждый год</item>
+        <item quantity="other">%1$s %2$s %3$s каждые %4$s года</item>
+    </plurals>
+
+    <string name="RepeatEveryMonth">Каждый месяц</string>
+    <string name="RepeatEveryOtherMonth">Каждый второй месяц</string>
+    <string name="RepeatEveryOtherWeek">Каждую вторую неделю</string>
+    <string name="RepeatEveryOtherYear">Каждый второй год</string>
+    <string name="RepeatEveryWeek">Каждую неделю</string>
+    <string name="RepeatEveryYear">Каждый год</string>
+
+    <string name="RepeatMonthly">Ежемесячно</string>
+    <string name="RepeatMonthlyDots">Ежемесячно…</string>
+    <string name="RepeatNone">Нет</string>
+    <string name="RepeatOptionAfterCompleted">После завершения</string>
+    <string name="RepeatOptionByDay">По дню недели</string>
+    <string name="RepeatOptionByDate">По дате</string>
+    <string name="RepeatOptionFixedSchedule">Фиксированный график</string>
+    <string name="RepeatOther">Другое…</string>
+    <string name="RepeatSemiMonthly">Дважды в месяц</string>
+    <string name="RepeatSemiMonthlyDots">Дважды в месяц…</string>
+
+    <string name="RepeatTabDaily">День</string>
+    <string name="RepeatTabMonthly">Месяц</string>
+    <string name="RepeatTabNone">Нет</string>
+    <string name="RepeatTabSemiMonthly">Полмесяца</string>
+    <string name="RepeatTabWeekly">Неделя</string>
+    <string name="RepeatTabYearly">Год</string>
+
+    <string name="RepeatTextDays">День(дней)</string>
+    <string name="RepeatTextEndOn">Заканчивается:</string>
+    <string name="RepeatTextEvery">Каждые:</string>
+    <string name="RepeatTextMonths">Месяц(ев)</string>
+    <string name="RepeatTextNone">Нажмите одну из кнопок выше, чтобы задать интервал повтора.</string>
+    <string name="RepeatTextRepeatBy">Повторять по:</string>
+    <string name="RepeatTextRepeatOn">Повторять в:</string>
+    <string name="RepeatTextOnlyOn">Только в:</string>
+    <string name="RepeatTextWeeks">Неделя(ель)</string>
+    <string name="RepeatTextYears">Год(а)</string>
+
+    <string name="RepeatTitle">Изменить повтор</string>
+
+    <string name="RepeatWeekly">Еженедельно</string>
+    <string name="RepeatWeeklyDots">Еженедельно…</string>
+    <string name="RepeatYearly">Ежегодно</string>
+    <string name="RepeatYearlyDots">Ежегодно…</string>
+
+    <string name="ToastBadPassword">Введённый пароль неверный.</string>
+    <string name="ToastPasswordProtected">Для расшифровки личных записей требуется пароль.</string>
+    <string name="ToastVibrateNotPermitted">Разрешение на вибрацию для напоминаний не предоставлено.</string>
+
+    <string name="TooltipAlarm">Напоминание</string>
+    <string name="TooltipNote">Заметка</string>
+    <string name="TooltipRepeat">Повторяется</string>
+
+    <string-array name="WeekdayList">
+        <item>@string/WeekdaySunday</item>
+        <item>@string/WeekdayMonday</item>
+        <item>@string/WeekdayTuesday</item>
+        <item>@string/WeekdayWednesday</item>
+        <item>@string/WeekdayThursday</item>
+        <item>@string/WeekdayFriday</item>
+        <item>@string/WeekdaySaturday</item>
+    </string-array>
+
+    <string name="WeekdayFriday">Пятница</string>
+    <string name="WeekdayMonday">Понедельник</string>
+    <string name="WeekdaySaturday">Суббота</string>
+    <string name="WeekdaySunday">Воскресенье</string>
+    <string name="WeekdayThursday">Четверг</string>
+    <string name="WeekdayTuesday">Вторник</string>
+    <string name="WeekdayWednesday">Среда</string>
+</resources>

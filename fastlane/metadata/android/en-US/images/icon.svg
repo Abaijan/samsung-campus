@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a1a2e"/>
+            <stop offset="100%" style="stop-color:#16213e"/>
+        </linearGradient>
+        <linearGradient id="paper" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f8f4ef"/>
+            <stop offset="100%" style="stop-color:#ede8e0"/>
+        </linearGradient>
+        <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f4a261"/>
+            <stop offset="100%" style="stop-color:#e76f51"/>
+        </linearGradient>
+        <linearGradient id="paper2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ffffff"/>
+            <stop offset="100%" style="stop-color:#f0ebe3"/>
+        </linearGradient>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.4"/>
+        </filter>
+        <filter id="shadow2" x="-10%" y="-10%" width="130%" height="130%">
+            <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.25"/>
+        </filter>
+        <clipPath id="roundedBox">
+            <rect x="56" y="56" width="400" height="400" rx="96" ry="96"/>
+        </clipPath>
+    </defs>
+
+    <!-- Background -->
+    <rect width="512" height="512" rx="112" ry="112" fill="url(#bg)"/>
+
+    <!-- Subtle texture dots -->
+    <circle cx="80" cy="80" r="2" fill="#ffffff" opacity="0.04"/>
+    <circle cx="160" cy="40" r="1.5" fill="#ffffff" opacity="0.04"/>
+    <circle cx="430" cy="90" r="2.5" fill="#ffffff" opacity="0.04"/>
+    <circle cx="460" cy="200" r="1.5" fill="#ffffff" opacity="0.03"/>
+    <circle cx="50" cy="350" r="2" fill="#ffffff" opacity="0.03"/>
+    <circle cx="400" cy="450" r="3" fill="#ffffff" opacity="0.03"/>
+
+    <!-- Back paper (slight tilt, shadow) -->
+    <g filter="url(#shadow2)" transform="rotate(-6, 256, 256)">
+        <rect x="118" y="108" width="276" height="330" rx="18" ry="18" fill="url(#paper)"/>
+    </g>
+
+    <!-- Middle paper (slight tilt) -->
+    <g filter="url(#shadow2)" transform="rotate(3, 256, 256)">
+        <rect x="118" y="108" width="276" height="330" rx="18" ry="18" fill="url(#paper2)"/>
+    </g>
+
+    <!-- Main paper -->
+    <g filter="url(#shadow)">
+        <rect x="128" y="98" width="276" height="330" rx="18" ry="18" fill="url(#paper2)"/>
+    </g>
+
+    <!-- Accent tab on top -->
+    <rect x="200" y="90" width="112" height="32" rx="10" ry="10" fill="url(#accent)"/>
+    <rect x="200" y="102" width="112" height="20" fill="url(#accent)"/>
+
+    <!-- Spiral rings -->
+    <circle cx="224" cy="102" r="9" fill="#1a1a2e" opacity="0.8"/>
+    <circle cx="224" cy="102" r="5.5" fill="#f8f4ef"/>
+    <circle cx="256" cy="102" r="9" fill="#1a1a2e" opacity="0.8"/>
+    <circle cx="256" cy="102" r="5.5" fill="#f8f4ef"/>
+    <circle cx="288" cy="102" r="9" fill="#1a1a2e" opacity="0.8"/>
+    <circle cx="288" cy="102" r="5.5" fill="#f8f4ef"/>
+
+    <!-- Lines on paper -->
+    <g opacity="0.18">
+        <line x1="160" y1="162" x2="352" y2="162" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round"/>
+        <line x1="160" y1="192" x2="352" y2="192" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round"/>
+        <line x1="160" y1="222" x2="352" y2="222" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round"/>
+        <line x1="160" y1="252" x2="352" y2="252" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round"/>
+        <line x1="160" y1="282" x2="352" y2="282" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round"/>
+        <line x1="160" y1="312" x2="352" y2="312" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round"/>
+        <line x1="160" y1="342" x2="352" y2="342" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Written content lines (darker, shorter = text) -->
+    <rect x="160" y="155" width="148" height="10" rx="5" fill="#2d2d4e" opacity="0.55"/>
+    <rect x="160" y="185" width="192" height="10" rx="5" fill="#2d2d4e" opacity="0.45"/>
+    <rect x="160" y="215" width="112" height="10" rx="5" fill="#2d2d4e" opacity="0.45"/>
+
+    <!-- Accent line (highlighted text) -->
+    <rect x="160" y="245" width="176" height="10" rx="5" fill="#e76f51" opacity="0.7"/>
+
+    <rect x="160" y="275" width="160" height="10" rx="5" fill="#2d2d4e" opacity="0.35"/>
+    <rect x="160" y="305" width="128" height="10" rx="5" fill="#2d2d4e" opacity="0.35"/>
+
+    <!-- Pencil / edit icon bottom right -->
+    <g transform="translate(304, 355) rotate(-40)">
+        <rect x="-10" y="-52" width="20" height="58" rx="4" fill="url(#accent)"/>
+        <polygon points="-10,6 10,6 0,24" fill="#c1440e"/>
+        <rect x="-10" y="-60" width="20" height="10" rx="3" fill="#b0a89a"/>
+        <line x1="0" y1="18" x2="0" y2="24" stroke="#fdf3e3" stroke-width="2"/>
+    </g>
+</svg>

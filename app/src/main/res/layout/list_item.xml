@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modern card-style list item with elevation and rounded corners -->
+<LinearLayout
+    android:id="@+id/ToDoListItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp">
+
+   <!-- Card container with shadow -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:background="@drawable/card_background"
+       android:padding="16dp"
+       android:elevation="2dp"
+       android:gravity="center_vertical">
+
+      <!-- Modern Checkbox -->
+      <!-- Modern Checkbox -->
+      <CheckBox
+          android:id="@+id/ToDoItemChecked"
+          android:layout_width="28dp"
+          android:layout_height="28dp"
+          android:button="@drawable/checkbox_modern"
+          android:layout_marginEnd="16dp"/>
+
+      <!-- Priority indicator (colored dot) -->
+      <TextView
+          android:id="@+id/ToDoTextPriority"
+          android:layout_width="8dp"
+          android:layout_height="8dp"
+          android:background="@drawable/priority_indicator"
+          android:layout_marginEnd="12dp"
+          android:visibility="gone"/>
+
+      <!-- Main content area -->
+      <LinearLayout
+          android:id="@+id/LinearLayoutItem"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+         <!-- Task description -->
+         <TextView
+             android:id="@+id/ToDoEditDescription"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="16sp"
+             android:textColor="#212121"
+             android:textStyle="normal"
+             android:maxLines="2"
+             android:ellipsize="end"
+             android:lineSpacingExtra="2dp"/>
+
+         <!-- Icons row (note, alarm, repeat) -->
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ToDoNoteImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/TooltipNote"
+                android:src="@drawable/postit"
+                android:tint="#FF8A65"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/ToDoAlarmImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/TooltipAlarm"
+                android:src="@drawable/alarm"
+                android:tint="#66BB6A"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/ToDoRepeatImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/TooltipRepeat"
+                android:src="@drawable/repeat"
+                android:tint="#42A5F5"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"/>
+         </LinearLayout>
+      </LinearLayout>
+
+      <!-- Right side info panel -->
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:gravity="end"
+          android:layout_marginStart="12dp">
+
+         <!-- Due date with modern style -->
+         <TextView
+             android:id="@+id/ToDoTextDueDate"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="12sp"
+             android:textColor="#757575"
+             android:background="@drawable/date_badge"
+             android:padding="4dp"
+             android:visibility="gone"/>
+
+         <!-- Overdue indicator (red exclamation) -->
+         <TextView
+             android:id="@+id/ToDoTextOverdue"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="18sp"
+             android:textColor="#F44336"
+             android:textStyle="bold"
+             android:layout_marginTop="4dp"
+             android:visibility="gone"/>
+
+         <!-- Category badge -->
+         <TextView
+             android:id="@+id/ToDoTextCateg"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="11sp"
+             android:textColor="#FFFFFF"
+             android:background="@drawable/category_badge"
+             android:paddingStart="8dp"
+             android:paddingEnd="8dp"
+             android:paddingTop="3dp"
+             android:paddingBottom="3dp"
+             android:layout_marginTop="4dp"
+             android:visibility="gone"/>
+      </LinearLayout>
+   </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuShowCompleted"
+        android:title="@string/MenuShowCompleted"
+        android:icon="@android:drawable/ic_menu_view"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menuUnlock"
+        android:title="@string/MenuUnlock"
+        android:icon="@drawable/ic_menu_login"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuPassword"
+        android:title="@string/MenuPasswordSet"
+        android:icon="@drawable/ic_menu_login"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuSettings"
+        android:title="@string/MenuSettings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuExport"
+        android:title="@string/MenuExport"
+        android:icon="@android:drawable/ic_menu_save"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuImport"
+        android:title="@string/MenuImport"
+        android:icon="@android:drawable/ic_menu_upload"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuInfo"
+        android:title="@string/MenuInfo"
+        android:icon="@android:drawable/ic_menu_info_details"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuSignOut"
+        android:title="Выйти"
+        android:icon="@android:drawable/ic_lock_power_off"
+        app:showAsAction="never"/>
+
+</menu>
