@@ -168,7 +168,7 @@
     <string name="MenuPasswordSet">Установить пароль</string>
     <string name="MenuSettings">Настройки</string>
     <string name="MenuUnlock">Разблокировать зашифрованные записи</string>
-    <string name="MenuShowCompleted">Показать/скрыть завершённые</string>
+    <string name="MenuShowCompleted"> все</string>
 
     <string-array name="MonList">
         <item>@string/MonthJan</item>

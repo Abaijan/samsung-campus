@@ -1,61 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Checked state - Blue with white checkmark -->
+    <!-- Отмечен - оранжевый фон с белой галочкой -->
     <item android:state_checked="true">
         <layer-list>
-            <!-- Background -->
+            <!-- Оранжевый фон с бордером -->
             <item>
                 <shape android:shape="rectangle">
-                    <solid android:color="#2196F3"/>
+                    <solid android:color="#E95B22"/>
+                    <stroke android:width="2dp" android:color="#D14A15"/>
                     <corners android:radius="4dp"/>
+                    <size android:width="24dp" android:height="24dp"/>
                 </shape>
             </item>
 
-            <!-- White checkmark using rotated L shape -->
-            <item>
-                <rotate
-                    android:fromDegrees="45"
-                    android:pivotX="30%"
-                    android:pivotY="65%">
-                    <layer-list>
-                        <!-- Short part -->
-                        <item android:left="7dp" android:top="9dp">
-                            <shape android:shape="rectangle">
-                                <solid android:color="#FFFFFF"/>
-                                <size android:width="2.5dp" android:height="6dp"/>
-                                <corners android:radius="1dp"/>
-                            </shape>
-                        </item>
-                        <!-- Long part -->
-                        <item android:left="7dp" android:top="3dp">
-                            <shape android:shape="rectangle">
-                                <solid android:color="#FFFFFF"/>
-                                <size android:width="2.5dp" android:height="12dp"/>
-                                <corners android:radius="1dp"/>
-                            </shape>
-                        </item>
-                    </layer-list>
-                </rotate>
+            <!-- Белая галочка -->
+            <item
+                android:top="4dp"
+                android:bottom="4dp"
+                android:left="4dp"
+                android:right="4dp">
+                <vector
+                    android:width="24dp"
+                    android:height="24dp"
+                    android:viewportWidth="24"
+                    android:viewportHeight="24">
+                    <path
+                        android:fillColor="#FFFFFF"
+                        android:pathData="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/>
+                </vector>
             </item>
         </layer-list>
     </item>
 
-    <!-- Pressed unchecked -->
-    <item android:state_pressed="true" android:state_checked="false">
+    <!-- Не отмечен - белый фон с серым бордером -->
+    <item>
         <shape android:shape="rectangle">
-            <stroke android:width="2dp" android:color="#2196F3"/>
-            <solid android:color="#E3F2FD"/>
-            <corners android:radius="4dp"/>
-        </shape>
-    </item>
-
-    <!-- Unchecked -->
-    <item android:state_checked="false">
-        <shape android:shape="rectangle">
-            <stroke android:width="2dp" android:color="#BDBDBD"/>
+            <stroke android:width="2dp" android:color="#757575"/>
             <solid android:color="#FFFFFF"/>
             <corners android:radius="4dp"/>
+            <size android:width="32dp" android:height="32dp"/>
         </shape>
     </item>
 

@@ -5,20 +5,10 @@
     <item
         android:id="@+id/menuShowCompleted"
         android:title="@string/MenuShowCompleted"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/ic_view"
         app:showAsAction="ifRoom"/>
 
-    <item
-        android:id="@+id/menuUnlock"
-        android:title="@string/MenuUnlock"
-        android:icon="@drawable/ic_menu_login"
-        app:showAsAction="never"/>
 
-    <item
-        android:id="@+id/menuPassword"
-        android:title="@string/MenuPasswordSet"
-        android:icon="@drawable/ic_menu_login"
-        app:showAsAction="never"/>
 
     <item
         android:id="@+id/menuSettings"

@@ -11,8 +11,10 @@
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp">
 
+
    <!-- Card container with shadow -->
    <LinearLayout
+
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="horizontal"
@@ -21,12 +23,11 @@
        android:elevation="2dp"
        android:gravity="center_vertical">
 
-      <!-- Modern Checkbox -->
-      <!-- Modern Checkbox -->
       <CheckBox
           android:id="@+id/ToDoItemChecked"
-          android:layout_width="28dp"
-          android:layout_height="28dp"
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+
           android:button="@drawable/checkbox_modern"
           android:layout_marginEnd="16dp"/>
 
@@ -82,7 +83,6 @@
                 android:layout_height="20dp"
                 android:contentDescription="@string/TooltipAlarm"
                 android:src="@drawable/alarm"
-                android:tint="#66BB6A"
                 android:layout_marginEnd="8dp"
                 android:visibility="gone"/>
 

@@ -307,25 +307,7 @@ public class ToDoListActivity extends ListActivity {
 
 	encryptor = StringEncryption.holdGlobalEncryption();
 	prefs = ToDoPreferences.getInstance(this);
-        prefs.registerOnToDoPreferenceChangeListener(
-                new ToDoPreferences.OnToDoPreferenceChangeListener() {
-                    @Override
-                    public void onToDoPreferenceChanged(ToDoPreferences prefs) {
-                        updateListFilter();
-                        if (menu != null) {
-                            MenuItem unlockItem =
-                                    menu.findItem(R.id.menuUnlock);
-                            unlockItem.setTitle(encryptor.hasKey()
-                                    ? R.string.MenuLock
-                                    : R.string.MenuUnlock);
-                            unlockItem.setVisible(
-                                    hasPassword && prefs.showPrivate());
-                        }
-                    }
-                },
-                TPREF_SHOW_CHECKED,
-                TPREF_SHOW_ENCRYPTED, TPREF_SHOW_PRIVATE,
-                TPREF_SELECTED_CATEGORY, TPREF_SORT_ORDER);
+
         prefs.registerOnToDoPreferenceChangeListener(
                 new ToDoPreferences.OnToDoPreferenceChangeListener() {
                     @Override
@@ -718,14 +700,10 @@ public class ToDoListActivity extends ListActivity {
         super.onCreateOptionsMenu(menu);
         Log.d(TAG, "onCreateOptionsMenu");
 	getMenuInflater().inflate(R.menu.menu_main, menu);
-        MenuItem unlockItem = menu.findItem(R.id.menuUnlock);
+
         MenuItem logoutItem = menu.findItem(R.id.menuSignOut);
-        unlockItem.setVisible(hasPassword && prefs.showPrivate());
-        unlockItem.setTitle(encryptor.hasKey()
-                ? R.string.MenuLock
-                : R.string.MenuUnlock);
-        menu.findItem(R.id.menuPassword).setTitle(hasPassword
-                ? R.string.MenuPasswordChange : R.string.MenuPasswordSet);
+
+
 	menu.findItem(R.id.menuSettings).setIntent(
 		new Intent(this, PreferencesActivity.class));
         menu.findItem(R.id.menuShowCompleted).setShowAsAction(
@@ -743,6 +721,7 @@ public class ToDoListActivity extends ListActivity {
 //        }
         if (item.getItemId() == R.id.menuShowCompleted) {
             prefs.setShowChecked(!prefs.showChecked());
+            updateListFilter();
             return true;
         }
         if(item.getItemId() == R.id.menuSignOut) {
@@ -756,18 +735,7 @@ public class ToDoListActivity extends ListActivity {
             return true;
         }
 
-        if (item.getItemId() == R.id.menuUnlock) {
-            if (encryptor.hasKey()) {
-                prefs.setShowEncrypted(false);
-                encryptor.forgetPassword();
-                if (unlockPasswordEditText != null)
-                    unlockPasswordEditText.setText("");
-                menu.findItem(R.id.menuUnlock).setTitle(R.string.MenuUnlock);
-            } else {
-                showDialog(UNLOCK_DIALOG_ID);
-            }
-            return true;
-        }
+
 
         if (item.getItemId() == R.id.menuExport) {
             Intent intent = new Intent(this, ExportActivity.class);
@@ -781,10 +749,7 @@ public class ToDoListActivity extends ListActivity {
             return true;
         }
 
-        if (item.getItemId() == R.id.menuPassword) {
-            showDialog(PASSWORD_DIALOG_ID);
-            return true;
-        }
+
 
         Log.w(TAG, "onOptionsItemSelected(" + item.getItemId()
                 + "): Not handled");
@@ -925,26 +890,7 @@ public class ToDoListActivity extends ListActivity {
 	    });
 	    return dueDateDialog;
 
-        case UNLOCK_DIALOG_ID:
-            builder = new AlertDialog.Builder(this);
-	    builder.setIcon(R.drawable.ic_menu_login);
-	    builder.setTitle(R.string.MenuUnlock);
-            View unlockLayout =
-                ((LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE))
-                .inflate(R.layout.unlock,
-                        (ScrollView) findViewById(R.id.UnlockLayoutRoot));
-            builder.setView(unlockLayout);
-            final DialogInterface.OnClickListener listener1 =
-                    new UnlockOnClickListener();
-            builder.setPositiveButton(R.string.ConfirmationButtonOK, listener1);
-            builder.setNegativeButton(R.string.ConfirmationButtonCancel, listener1);
-            unlockDialog = builder.create();
-            CheckBox showPasswordCheckBox1 =
-                    (CheckBox) unlockLayout.findViewById(R.id.CheckBoxShowPassword);
-            unlockPasswordEditText =
-                    (EditText) unlockLayout.findViewById(R.id.EditTextPassword);
-            showPasswordCheckBox1.setOnCheckedChangeListener(unlockShowPasswordListener);
-            return unlockDialog;
+
 
 	case PASSWORD_DIALOG_ID:
 	    builder = new AlertDialog.Builder(this);
@@ -1103,10 +1049,8 @@ public class ToDoListActivity extends ListActivity {
         @Override
         public void run() {
             if (menu != null) {
-                menu.findItem(R.id.menuUnlock).setVisible(hasPassword);
-                menu.findItem(R.id.menuPassword).setTitle(hasPassword
-                        ? R.string.MenuPasswordChange
-                        : R.string.MenuPasswordSet);
+
+
             }
             if (passwordChangeDialog != null) {
                 TableRow tr = (TableRow) passwordChangeDialog.findViewById(
@@ -1177,70 +1121,14 @@ public class ToDoListActivity extends ListActivity {
 	}
     }
 
-    class UnlockOnClickListener implements DialogInterface.OnClickListener {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            Log.d(TAG, "UnlockOnClickListener.onClick(" + which + ")");
-            switch (which) {
-                case DialogInterface.BUTTON_NEGATIVE:
-                    dialog.dismiss();
-                    return;
 
-                case DialogInterface.BUTTON_POSITIVE:
-                    if (unlockPasswordEditText.length() > 0) {
-                        char[] password = new char[unlockPasswordEditText.length()];
-                        unlockPasswordEditText.getText().getChars(0,
-                                password.length, password, 0);
-                        encryptor.setPassword(password);
-                        executor.submit(checkPasswordForUnlock);
-                    } else {
-                        encryptor.forgetPassword();
-                        prefs.setShowEncrypted(false);
-                        menu.findItem(R.id.menuUnlock)
-                                .setTitle(R.string.MenuUnlock);
-                    }
-                    return;
-            }
-        }
-    }
 
     /**
      * Check the password that the user entered in
      * {@link UnlockOnClickListener} against the database.
      * This must be done on the non-UI thread.
      */
-    private final Runnable checkPasswordForUnlock = new Runnable() {
-        @Override
-        public void run() {
-            try {
-                if (encryptor.checkPassword(getContentResolver())) {
-                    prefs.setShowEncrypted(true);
-                    menu.findItem(R.id.menuUnlock)
-                            .setTitle(R.string.MenuLock);
-                    unlockDialog.dismiss();
-                } else {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(ToDoListActivity.this,
-                                    R.string.ToastBadPassword,
-                                    Toast.LENGTH_LONG).show();
-                            unlockDialog.show();
-                        }
-                    });
-                }
-            } catch (GeneralSecurityException gsx) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(ToDoListActivity.this,
-                                R.string.ToastBadPassword,
-                                Toast.LENGTH_LONG).show();
-                    }
-                });
-            }
-        }
-    };
+
     class PasswordChangeOnClickListener
 		implements DialogInterface.OnClickListener {
 	@Override

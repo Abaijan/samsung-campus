@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.*;
 
+import android.annotation.SuppressLint;
 import android.app.IntentService;
 import android.content.*;
 import android.database.Cursor;
@@ -44,7 +45,7 @@ import com.abaijan.todo.util.StringEncryption;
  * @author Trevin Beattie
  */
 public class XMLExporterService extends IntentService
-        implements ProgressReportingService {
+        implements com.abaijan.todo.service.ProgressReportingService {
 
     public static final String LOG_TAG = "XMLExporterService";
 
@@ -108,7 +109,7 @@ public class XMLExporterService extends IntentService
      * Observers to call (on the UI thread) when
      * {@link #onHandleIntent(Intent)} is finished
      */
-    private final List<HandleIntentObserver> observers = new ArrayList<>();
+    private final List<com.abaijan.todo.service.HandleIntentObserver> observers = new ArrayList<>();
 
     /** Create the exporter service with a named worker thread */
     public XMLExporterService() {
@@ -308,6 +309,7 @@ public class XMLExporterService extends IntentService
     }
 
     /** Write out the metadata */
+    @SuppressLint("Range")
     protected void writeMetadata(PrintStream out) {
         final String[] PROJECTION = {
                 ToDoMetadata._ID,
@@ -320,7 +322,7 @@ public class XMLExporterService extends IntentService
             out.println("    <" + METADATA_TAG + ">");
             int count = 0;
             while (c.moveToNext()) {
-                String name = c.getString(c.getColumnIndex(ToDoMetadata.NAME));
+                @SuppressLint("Range") String name = c.getString(c.getColumnIndex(ToDoMetadata.NAME));
                 // Skip the password if we are not exporting private records
                 if (StringEncryption.METADATA_PASSWORD_HASH[0].equals(name) &&
                         !exportPrivate)
